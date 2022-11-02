@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+/* Start Variables */
+:root {
+	/* Primary */
+	--Cyan-color: hsl(179, 62%, 43%);
+	--Cyan2-color: hsl(179, 61%, 38%);
+	--Bright-color: hsl(71, 73%, 54%);
+	/* Neutral */
+	--LightGray-color: hsl(203, 44%, 93%);
+	--GrayishBlue-color: hsl(218, 22%, 67%);
+	/*Font size*/
+	--word-Font-size: 1rem;
+}
+/* End Variables */
+/* End Global Rules */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background-color: var(--LightGray-color);
+	font-family: "Karla", sans-serif;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	min-height: 100vh;
+	overflow: hidden;
+}
+.container {
+	max-width: 30rem;
+	height: auto;
+	margin: 1rem;
+	border-radius: 0.3125rem;
+}
+.container .Component {
+	max-width: 15rem;
+	height: auto;
+}
+.container .Component h1 {
+	font-weight: 700;
+	font-size: var(--word-Font-size);
+	padding: 1rem;
+	color: white;
+}
+.container .Component p {
+	font-size: 0.8125rem;
+	font-weight: 400;
+	line-height: 1.5;
+	padding: 1rem;
+}
+/*====== Component 1 ========*/
+.container .Component:nth-of-type(1) {
+	border: 1px solid white;
+	background-color: white;
+	border-radius: 5px 5px 0 0;
+}
+.container .Component:nth-of-type(1) h1 {
+	color: var(--Cyan-color);
+}
+.container .Component:nth-of-type(1) p:first-of-type {
+	color: var(--Bright-color);
+	padding-top: 0;
+	font-weight: 700;
+}
+.container .Component:nth-of-type(1) p:last-of-type {
+	color: var(--GrayishBlue-color);
+	padding-top: 0;
+	line-height: 2;
+}
+/*====== Component 2 ========*/
+.container .Component:nth-of-type(2) {
+	border: 1px solid var(--Cyan2-color);
+	background-color: var(--Cyan2-color);
+}
+.container .Component:nth-of-type(2) span {
+	padding: 0.625rem;
+	padding-left: 0;
+	font-size: 30px;
+	font-weight: 700;
+	color: white;
+	vertical-align: middle;
+}
+.container .Component:nth-of-type(2) p:first-of-type {
+	padding-bottom: 0;
+	padding-top: 0;
+	font-weight: 400;
+	color: var(--LightGray-color);
+}
+.container .Component:nth-of-type(2) p:last-of-type {
+	padding-top: 0;
+	color: var(--LightGray-color);
+	font-weight: 400;
+}
+.container .Component:nth-of-type(2) a {
+	padding: 0.625rem 4.6875rem;
+	color: var(--LightGray-color);
+	font-weight: 400;
+	text-decoration: none;
+	display: block;
+	background-color: var(--Bright-color);
+	width: fit-content;
+	margin-inline: auto;
+	border-radius: 0.3125rem;
+	margin-block-end: 1rem;
+	box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.59);
+	-webkit-box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.59);
+	-moz-box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.59);
+}
+/*======= Component 3 =======*/
+.container .Component:nth-of-type(3) {
+	border: 1px solid var(--Cyan-color);
+	background-color: var(--Cyan-color);
+}
+.container .Component:nth-of-type(3) p {
+	padding-top: 0;
+	color: var(--LightGray-color);
+	margin-inline-end: 2.8125rem;
+}
+/*======= Media =======*/
+@media (width >= 768px) {
+	.container {
+		max-width: 46.875rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.container .Component:nth-of-type(1) {
+		max-width: fit-content;
+		height: fit-content;
+		grid-column-start: 1;
+		grid-column-end: -1;
+	}
+    .container .Component:nth-of-type(2){
+        border-radius:0 0 0 0.3125rem;
+    }
+    .container .Component:nth-of-type(3) {
+        border-radius: 0 0 0.3125rem;
+}
+}
+
